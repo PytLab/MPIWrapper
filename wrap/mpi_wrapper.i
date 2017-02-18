@@ -3,7 +3,7 @@
  *  \contact shaozhengjiang@gmail.com
  */
 
-%module mpyi
+%module mpiwrapper
 
 // Include headers in cpp files. 
 %{
