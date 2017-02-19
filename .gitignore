@@ -27,3 +27,9 @@
 *.exe
 *.out
 *.app
+
+# Python compiled files
+*.pyc
+
+# Vim temp files.
+*.swp
