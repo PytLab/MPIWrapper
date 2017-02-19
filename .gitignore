@@ -33,3 +33,8 @@
 
 # Vim temp files.
 *.swp
+
+# SWIG generated files.
+mpiwrapper.py
+*.cxx
+
