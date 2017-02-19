@@ -12,7 +12,9 @@
 #include "mpih.h"
 
 /// Struct for handling MPI functions to be wrapped.
-struct MPIWrapper {
+class MPIWrapper {
+
+public:
 
     /*! \brief Wrapps MPI::Initialize
      */
