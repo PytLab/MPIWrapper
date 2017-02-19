@@ -30,19 +30,20 @@ struct MPIWrapper {
      */
     static bool finalized();
 
-    /*! \brief Wrapps MPI_COMM_RANK
+    /*! \brief Wrapps MPI::Comm::Get_rank
      *  \param comm: The communicator to use.
-     *  \return: The rank of this process withing the given communicator.
+     *  \return: The rank of this process within the given communicator.
      */
     static int rank(const MPI::Intracomm & comm=MPI::COMM_WORLD);
 
-    /*! \brief Wrapps MPI_COMM_SIZE
+    /*! \brief Wrapps MPI::Comm::Get_size
      *  \param comm: The communicator to use.
      *  \return: The sise of the communicator (the total number of processes).
      */
     static int size(const MPI::Intracomm & comm=MPI::COMM_WORLD);
 
-    /*! \brief Wrapps MPI_BARRIER, syncronizing processes.
+    /*! \brief Wrapps MPI::Comm::Barrier, syncronizing processes within
+     *         the given communicator.
      *  \param comm: The communicator to use.
      */
     static void barrier(const MPI::Intracomm & comm=MPI::COMM_WORLD);
@@ -55,5 +56,5 @@ struct MPIWrapper {
 };
 
 
-#endif // __MPICOMMONS__
+#endif // __MPIWRAPPER__
 
