@@ -26,22 +26,6 @@ void MPIWrapper::init()
 
 // -----------------------------------------------------------------------------
 //
-bool MPIWrapper::finalized()
-{
-    return MPI::Is_finalized();
-}
-
-
-// -----------------------------------------------------------------------------
-//
-bool MPIWrapper::initialized()
-{
-    return MPI::Is_initialized();
-}
-
-
-// -----------------------------------------------------------------------------
-//
 void MPIWrapper::finalize()
 {
     if (finalized())
@@ -50,33 +34,5 @@ void MPIWrapper::finalize()
     }
 
     MPI::Finalize();
-}
-
-
-// -----------------------------------------------------------------------------
-//
-int MPIWrapper::rank(const MPI::Intracomm & comm)
-{
-    int rank;
-    rank = comm.Get_rank();
-    return rank;
-}
-
-
-// -----------------------------------------------------------------------------
-//
-int MPIWrapper::size(const MPI::Intracomm & comm)
-{
-    int size;
-    size = comm.Get_size();
-    return size;
-}
-
-
-// -----------------------------------------------------------------------------
-//
-void MPIWrapper::barrier(const MPI::Intracomm & comm)
-{
-    comm.Barrier();
 }
 
